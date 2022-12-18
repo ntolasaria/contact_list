@@ -268,6 +268,7 @@ end
 get "/logout" do
   add_contacts_to_file
   session.clear
+  session[:message] = "You have been successfully logged out"
 
   redirect "/"
 end

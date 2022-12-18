@@ -248,4 +248,20 @@ class ContactListTest < Minitest::Test
     assert_includes last_response.body, "The search query must be atleast 3 characters"
   end
 
+  def test_logout
+    initialize_admin_in_file
+
+    get "/logout", {}, admin_session
+
+    assert_equal 302, last_response.status
+    assert_nil session[:username]
+    assert_nil session[:contacts]
+    assert_equal "You have been successfully logged out", session[:message]
+
+    get last_response["Location"]
+
+    assert_equal 200, last_response.status
+    assert_includes last_response.body, %q(<a href="/login">Login</a>)
+  end
+
 end
