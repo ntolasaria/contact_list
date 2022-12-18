@@ -1,0 +1,11 @@
+<div>
+  <form action="/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= params[:name] %>">
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" value="<%= params[:phone] %>">
+    <label for="email">Email:</label>
+    <input type="text" name="email" value="<%= params[:email] %>">
+    <button type="submit">Add</button>
+  </form>
+</div>

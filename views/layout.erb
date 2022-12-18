@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <title>Contact List</title>
+  <link rel="stylesheet" href="/stylesheets/app.css" type="text/css">
+  <body>
+    <div class="header">
+      <h2>Contact List</h2>
+    </div>
+    <% if session[:error] %>
+      <div class="error">
+        <%= session.delete(:error) %>
+      </div>
+    <% end %>
+    <% if session[:message] %>
+      <div class="message">
+        <%= session.delete(:message) %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

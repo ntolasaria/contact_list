@@ -1,0 +1,15 @@
+<div>
+  <p>Logged in as <%= session[:username] %></p>
+  <form action="/search" method="get">
+    <input type="text" name="query">
+    <button type="submit">Search</button>
+  </form>
+  <h4>All Contacts:</h4>
+  <% sorted_contacts do |contact| %>
+    <ul>
+      <li><a href="/contact/<%= contact[:uid] %>"><%= contact[:name] %></a></li>
+    </ul>
+  <% end %>
+  <p><a href="/logout">Logout</a></p>
+  <p><a href="/">Homepage</a></p>
+</div>

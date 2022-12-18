@@ -1,0 +1,16 @@
+<div>
+  <h4>Showing search results for '<em><%= params[:query] %></em>':</h4>
+  <a href="/all">Back</a>
+  <br />
+  <% if !@matching_contacts.empty? %>
+    <% @matching_contacts.each do |contact| %>
+      <ul>
+        <li><a href="/contact/<%= contact[:uid] %>"><%= contact[:name] %></a></li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>No results found..</p>
+  <% end %>
+  <br />
+  <a href="/">Homepage</a>
+</div>

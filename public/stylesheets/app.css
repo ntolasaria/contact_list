@@ -1,0 +1,16 @@
+body  {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+.message {
+  color: #006400;
+  background: #7FFFD4;
+  padding: 10px; 
+}
+
+.error {
+  color: #8B0000;
+  background: #FFA07A;
+  padding: 10px;
+}

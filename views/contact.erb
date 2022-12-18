@@ -1,0 +1,15 @@
+<div>
+  <h4>Details:</h4>
+  <p>Name: <%= @contact[:name] %></p>
+  <p>Phone: <%= @contact[:phone] %></p>
+  <% if @contact[:email] %>
+    <p>Email: <%= @contact[:email] %></p>
+  <% end %>
+</div>
+<form action="/contact/<%= @contact[:uid]%>/update" method="post">
+  <button type="submit" name="choice" value="edit">Edit</button>
+  <button type="submit" name="choice" value="delete">Delete</button>
+</form>
+<a href="/">
+  <p>Homepage</p>
+</a>

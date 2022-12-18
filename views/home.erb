@@ -1,0 +1,11 @@
+<div>
+  <% if session[:username] %>
+    <p>Logged in as <%= session[:username] %></p>
+    <p><a href="/all">All contacts</a></p>
+    <p><a href="/add">Add contact</a></p>
+    <a href="/logout">Logout</a> | <a href="/savetofile">Save</a>
+  <% else %>
+    <p><a href="/login">Login</a></p>
+    <p><a href="/signup">Signup</a></p>
+  <% end %>
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <form action="/contact/<%= @contact[:uid] %>/edit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @contact[:name] %>">
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" value="<%= @contact[:phone] %>">
+    <label for="email">Email:</label>
+    <input type="text" name="email" value="<%= @contact[:email] %>">
+    <button type="submit">Submit</button>
+  </form>
+</div>
